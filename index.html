@@ -1,12 +1,15 @@
-<!doctype HTML>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>JSON Formatter | json viewer | json pretty print online</title>
     <meta charset="utf-8" />
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery.json-viewer.js"></script>
-    <link href="css/jquery.json-viewer.css" type="text/css" rel="stylesheet">
-
+    <script src="js/custom.js"></script>
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <style type="text/css">
 body {
   margin: 0 100px;
@@ -59,8 +62,10 @@ $(function() {
     crossorigin="anonymous"></script>
   </head>
   <body>
+    <div class="container">
+      <div class="row">
     <h1><a href="https://nayon.net">JSON Formatter | JSON Viewer | JSON Pretty Print Online</a></h1>
-    <textarea id="json-input" autocomplete="off">
+    <textarea class="form-control" id="json-input" autocomplete="off">
 {
   "id": 1001,
   "type": "donut",
@@ -86,21 +91,23 @@ $(function() {
 }</textarea>
     <p class="options">
       Options:
-      <label title="Generate node as collapsed">
-        <input type="checkbox" id="collapsed">Collapse nodes
-      </label>
-      <label title="Allow root element to be collasped">
-        <input type="checkbox" id="root-collapsable" checked>Root collapsable
-      </label>
-      <label title="Surround keys with quotes">
-        <input type="checkbox" id="with-quotes">Keys with quotes
-      </label>
-      <label title="Generate anchor tags for URL values">
-        <input type="checkbox" id="with-links" checked>
-        With Links
-      </label>
+
+      <input class="form-check-input" type="checkbox" id="collapsed">
+      <label class="form-check-label" title="Generate node as collapsed">Collapse nodes</label>
+
+      <input class="form-check-input" type="checkbox" id="root-collapsable" checked>
+      <label title="Allow root element to be collasped">Root collapsable</label>
+
+      <input class="form-check-input" type="checkbox" id="with-quotes">
+      <label title="Surround keys with quotes">Keys with quotes</label>
+
+      <input class="form-check-input" type="checkbox" id="with-links" checked>
+      <label title="Generate anchor tags for URL values">With Links</label>
     </p>
-    <button id="btn-json-viewer" title="run jsonViewer()">Pretty JSON</button>
+    
+    <button type="button" class="btn btn-primary" id="btn-json-viewer" title="run jsonViewer()">Pretty JSON</button>
     <pre id="json-renderer"></pre>
+  </div>
+</div>
   </body>
 </html>

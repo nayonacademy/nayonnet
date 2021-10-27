@@ -126,7 +126,7 @@
 
       // Insert HTML in target DOM element
       $(this).html(html);
-      $(this).addClass('json-document');
+      $(this).addClass('json-document form-control');
 
       // Bind click on toggle buttons
       $(this).off('click');

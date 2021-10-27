@@ -55,3 +55,13 @@ a.json-placeholder {
 a.json-placeholder:hover {
   text-decoration: underline;
 }
+
+#json-renderer {
+    border: 1px solid #aaa;
+    margin-top: 20px;
+    padding: 23px;
+}
+p.options {
+  padding: 15px;
+  margin: 0px;
+}
